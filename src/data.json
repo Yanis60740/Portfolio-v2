@@ -1,0 +1,97 @@
+{
+  "title": "Web developer junior",
+  "sections": [
+    {
+      "name": "About me",
+      "accroche": "Hello ! I'm Yanis Abid",
+      "content": [
+        "I am a junior web developer with a passion for creating functional websites and applications. ",
+        "My passion for programming has driven me to constantly learn new skills and technologies to improve my projects.",
+        "Here you will find my skills and my latest works.",
+        "I'm always looking for exciting new challenges, so feel free to contact me to discuss your projects."
+      ],
+      "localisation": "Amiens, Bordeaux, Biarritz",
+      "photo": "../src/assets/images/illustration.svg"
+    },
+
+    {
+      "name": "Skills",
+      "skills": [
+        {
+          "name": "C",
+          "icone": "../src/assets/icones/c.svg"
+        },
+        {
+          "name": "java",
+          "icone": "../src/assets/icones/java.svg"
+        },
+        {
+          "name": "mysql",
+          "icone": "../src/assets/icones/mysql.svg"
+        },
+        {
+          "name": "php",
+          "icone": "../src/assets/icones/php.svg"
+        },
+        {
+          "name": "html",
+          "icone": "../src/assets/icones/html.svg"
+        },
+        {
+          "name": "css",
+          "icone": "../src/assets/icones/css.svg"
+        }
+      ]
+    },
+    {
+      "name": "Work",
+      "project": [
+        {
+            "name": "car game",
+            "type": "single player game",
+            "icone": "../src/assets/images/illustration.png"
+          },
+          {
+            "name": "chess game",
+            "type": "multiplayer player game",
+            "icone": "../src/assets/images/illustration.png"
+          },
+          {
+            "name": "yanis abid",
+            "type": "portfolio",
+            "icone": "../src/assets/images/illustration.png"
+          },
+          {
+            "name": "energie watt",
+            "type": "application de simulation de taxes",
+            "icone": "../src/assets/images/illustration.png"
+          },
+          {
+            "name": "renta&co",
+            "type": "application de gestion pour boulangerie",
+            "icone": "../src/assets/images/illustration.png"
+          }
+      ]
+    }
+    
+  ],
+  "footer": {
+    "name": "Footer",
+    "contact": [
+      "yanisabid80000@gmail.com",
+      "06 71 25 72 55"
+    ],
+    "follow": [
+      {
+        "name": "github",
+        "icone": "../src/assets/icones/github.svg",
+        "link": "https://github.com/Yanis60740"
+      },
+      {
+        "name": "linkedin",
+        "icone": "../src/assets/icones/linkedin.svg",
+        "link": "https://www.linkedin.com/in/yanis-abid-8b1b3b1b4/"
+      }
+    ]
+  }
+}
