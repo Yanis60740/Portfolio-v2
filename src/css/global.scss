@@ -1,3 +1,36 @@
+@import "../css/variables.scss";
 body{
-    background-color: black;
+    background-color: $secondary-color;
+    font-family: $dela-gothic;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+section{
+    padding: 160px 20%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h1,h2{
+    font-family: $dela-gothic;
+    color: $primary-color;
+    font-size: $title-size;
+    margin: 0;
+}
+
+button{
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    -webkit-appearance: none;  /* Remove styles added by Webkit browsers (like Chrome, Safari) */
+    -moz-appearance: none;     /* Remove styles added by Firefox */
+    appearance: none;          /* General rule to remove certain platform-specific styles */
 }
