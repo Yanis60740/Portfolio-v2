@@ -3,13 +3,14 @@
   "sections": [
     {
       "name": "About me",
-      "accroche": "Hello ! I'm Yanis Abid",
+      "accroche": ["Hello !","I'm Yanis Abid,"],
       "content": [
         "I am a junior web developer with a passion for creating functional websites and applications. ",
         "My passion for programming has driven me to constantly learn new skills and technologies to improve my projects.",
         "Here you will find my skills and my latest works.",
         "I'm always looking for exciting new challenges, so feel free to contact me to discuss your projects."
       ],
+      "icon": "position_icon.svg",
       "localisation": "Amiens, Bordeaux, Biarritz",
       "photo": "../src/assets/images/illustration.svg"
     },
