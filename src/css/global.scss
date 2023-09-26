@@ -35,3 +35,9 @@ button{
     -moz-appearance: none;     /* Remove styles added by Firefox */
     appearance: none;          /* General rule to remove certain platform-specific styles */
 }
+
+.sectionTitle{
+    padding: 20px 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid $primary-color;
+}

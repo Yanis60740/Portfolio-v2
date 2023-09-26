@@ -1,7 +1,7 @@
 <template>
   <div class="navContainer">
     <div class="navBar">
-      <div class="navBar__logo">YANIS ABID</div>
+      <div class="navBar__logo"><a href="#index">YANIS ABID</a></div>
       <div class="navBar__links">
         <a
           v-for="section in sections"
@@ -91,6 +91,8 @@ export default {
   top: 0;
   left: 0;
   border-bottom: 1px solid $primary-color;
+  background-color: $secondary-color;
+  z-index: 100;
 }
 .navBar {
   display: flex;
@@ -99,11 +101,15 @@ export default {
   align-items: center;
   font-size: $small-size;
   max-width: 1840px;
-  
   & a {
     font-family: $open-sans;
     color: $primary-color;
     font-weight: 700;
+  }
+  & a:nth-child(0){
+    font-family: $dela-gothic;
+    color: $primary-color;
+    font-weight: 400;
   }
   &__logo {
     color: $primary-color;

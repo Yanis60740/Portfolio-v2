@@ -1,6 +1,6 @@
 <template>
-  <div class="aboutMe">
-    <div class="aboutMe__title">
+  <div class="aboutMe" id="about-me">
+    <div class="sectionTitle">
       <h2>{{ section.name.toUpperCase() }}</h2>
     </div>
     <div class="aboutMe__box">
@@ -9,18 +9,17 @@
           <div></div>
         </div>
         <div class="aboutMe__content__right">
-            <div v-for="accroche in section.accroche" :key="accroche">
-            <h3>{{ accroche }}</h3>
+          <div v-for="accroche in section.accroche" :key="accroche">
+            <h3>{{ accroche.toUpperCase() }}</h3>
           </div>
           <div v-for="paragraph in section.content" :key="paragraph">
             <p>{{ paragraph }}</p>
           </div>
           <div>
             <img :src="iconPath" alt="icon_localisation">
-            
             <span>{{ section.localisation }}</span>
-        </div>
-          <div><ContactButton /></div>
+          </div>
+          <div class="buttonBox"><ContactButton /></div>
         </div>
       </div>
     </div>
@@ -37,9 +36,8 @@ export default {
   },
   data() {
     return {
-      title: jsonData.title,
       section: jsonData.sections[0],
-      iconPath: require(`@/assets/icones/${jsonData.sections[0].icon}`)
+      iconPath: require(`../assets/icones/${jsonData.sections[0].icon}`)
     };
   },
 };
@@ -49,11 +47,7 @@ export default {
 @import "../css/variables.scss";
 
 .aboutMe {
-  &__title {
-    padding: 20px 0;
-    box-sizing: border-box;
-    border-bottom: 1px solid $primary-color;
-  }
+  border-bottom: 1px solid $primary-color;
   &__content {
     display: flex;
     justify-content: space-between;
@@ -75,9 +69,10 @@ export default {
       }
     }
     &__right {
-      background-color: aqua;
       width: 40%;
-      color: $primary-color;
+      color: #343434;
+      padding: 50px 0;
+      box-sizing: border-box;
       & h3{
         text-align: left;
         font-family: $dela-gothic;
@@ -85,6 +80,11 @@ export default {
         font-size: $small-size;
       }
       & p {
+        text-align: left;
+      }
+      & div:nth-child(7) {
+        display: flex;
+        align-items: center;
         text-align: left;
       }
     }
@@ -97,5 +97,13 @@ export default {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+.buttonBox {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 95px 0;
+  box-sizing: border-box;
 }
 </style>

@@ -20,27 +20,27 @@
       "skills": [
         {
           "name": "C",
-          "icone": "../src/assets/icones/c.svg"
+          "icon": "c.svg"
         },
         {
           "name": "java",
-          "icone": "../src/assets/icones/java.svg"
+          "icon": "java.svg"
         },
         {
           "name": "mysql",
-          "icone": "../src/assets/icones/mysql.svg"
+          "icon": "mysql.svg"
         },
         {
           "name": "php",
-          "icone": "../src/assets/icones/php.svg"
+          "icon": "php.svg"
         },
         {
           "name": "html",
-          "icone": "../src/assets/icones/html.svg"
+          "icon": "html.svg"
         },
         {
           "name": "css",
-          "icone": "../src/assets/icones/css.svg"
+          "icon": "css.svg"
         }
       ]
     },

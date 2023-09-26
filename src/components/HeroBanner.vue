@@ -1,5 +1,5 @@
 <template>
-    <section class="heroBanner">
+    <section class="heroBanner" id="index">
         <div class="heroBanner__container">
             <div class="heroBanner__container__left">
                 <h1>{{ title.toUpperCase() }}</h1>
