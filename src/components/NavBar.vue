@@ -90,7 +90,7 @@ export default {
   box-sizing: border-box;
   top: 0;
   left: 0;
-  border-bottom: 1px solid #323232;
+  border-bottom: 1px solid $primary-color;
 }
 .navBar {
   display: flex;
