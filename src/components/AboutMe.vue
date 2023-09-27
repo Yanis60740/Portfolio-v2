@@ -1,5 +1,6 @@
 <template>
-  <div class="aboutMe" id="about-me">
+  <div class="ancre" id="about-me"></div>
+  <div class="aboutMe">
     <div class="sectionTitle">
       <h2>{{ section.name.toUpperCase() }}</h2>
     </div>
@@ -52,6 +53,8 @@ export default {
     display: flex;
     justify-content: space-between;
     width: 70%;
+    font-family: $open-sans;
+    font-size: $paragraph-size;
     &__left {
       display: flex;
       align-items: center;

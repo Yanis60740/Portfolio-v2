@@ -48,7 +48,7 @@ export default {
         if (this.isSwitched) {
             console.log("switched");
           gsap.to(switchCircle, {
-            x: "15px",
+            x: "24px",
             duration: duree,
             ease : "power2.inOut",
             background: "#343434"
@@ -101,27 +101,25 @@ export default {
   align-items: center;
   font-size: $small-size;
   max-width: 1840px;
-  & a {
-    font-family: $open-sans;
-    color: $primary-color;
-    font-weight: 700;
-  }
-  & a:nth-child(0){
-    font-family: $dela-gothic;
-    color: $primary-color;
-    font-weight: 400;
-  }
   &__logo {
     color: $primary-color;
     font-family: $dela-gothic;
     font-weight: 400;
+    & a {
+      color: $primary-color;
+    }
   }
   &__links {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 1117px;
+    width: 60%;
+    & a {
+      font-family: $open-sans;
+      color: $primary-color;
+      font-weight: 700;
+    }
   }
   &__switch {
     width: 45px;

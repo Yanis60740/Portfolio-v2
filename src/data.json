@@ -50,27 +50,27 @@
         {
             "name": "car game",
             "type": "single player game",
-            "icone": "../src/assets/images/illustration.png"
+            "icon": "illustration.svg"
           },
           {
             "name": "chess game",
             "type": "multiplayer player game",
-            "icone": "../src/assets/images/illustration.png"
+            "icon": "illustration.svg"
           },
           {
             "name": "yanis abid",
             "type": "portfolio",
-            "icone": "../src/assets/images/illustration.png"
+            "icon": "illustration.svg"
           },
           {
             "name": "energie watt",
             "type": "application de simulation de taxes",
-            "icone": "../src/assets/images/illustration.png"
+            "icon": "illustration.svg"
           },
           {
             "name": "renta&co",
             "type": "application de gestion pour boulangerie",
-            "icone": "../src/assets/images/illustration.png"
+            "icon": "illustration.svg"
           }
       ]
     }

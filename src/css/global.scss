@@ -10,15 +10,31 @@ a{
 }
 
 section{
-    padding: 160px 20%;
+    padding: 80px 17%;
     width: 100%;
     box-sizing: border-box;
 }
 
-h1,h2,h3{
+h1,h2{
     font-family: $dela-gothic;
     color: $primary-color;
     font-size: $title-size;
+    margin: 0;
+}
+
+h3{
+    font-family: $dela-gothic;
+    color: $primary-color;
+    font-size: $subtitle-size;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+h4{
+    font-family: $open-sans;
+    color: $primary-color;
+    font-size: 19px;
+    text-transform: uppercase;
     margin: 0;
 }
 
@@ -40,4 +56,10 @@ button{
     padding: 20px 0;
     box-sizing: border-box;
     border-bottom: 1px solid $primary-color;
+}
+
+.ancre{
+    position: relative;
+    top: -56px;
+    visibility: hidden;
 }

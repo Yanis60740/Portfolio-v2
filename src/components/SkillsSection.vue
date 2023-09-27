@@ -1,12 +1,15 @@
 <template>
+    <div class="ancre" id="skills"></div>
     <div class="skillsSection">
         <div class="sectionTitle">
             <h2>{{ name.name.toUpperCase() }}</h2>
         </div>
         <div class="skillsSection__box">
-            <div v-for="skill in processedSkills" :key="skill.name">
-                <img :src="skill.icon" :alt="skill.name">
-            </div>
+          <div class="skillsSection__box__container">
+              <div v-for="skill in processedSkills" :key="skill.name">
+                  <img :src="skill.icon" :alt="skill.name">
+              </div>
+          </div>
         </div>
     </div>
 </template>
@@ -30,7 +33,7 @@ export default {
           icon: require(`../assets/icones/${skill.icon}`)
         }));
       }
-      return [];  // return an empty array if skills is undefined
+      return [];
     }
 }
 
@@ -42,9 +45,29 @@ export default {
 @import "../css/variables.scss";
 
 .skillsSection{
-    &__box{
-        width: 100px;
-        background-color: aqua;
+  border-bottom: 1px solid $primary-color;
+  &__box{
+    height: 423px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__container{
+        display: flex;
+        & div{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 165px;
+          width: 165px;
+          border-radius: 90px;
+          background: linear-gradient(to bottom, #CDB4FF, #F2F2F2);
+          box-shadow: 6px 6px #343434;
+          border: 1px $primary-color solid;
+        }
+        & div:not(:first-child){
+          margin-left: -25px;
+        }
     }
+  }
 }
 </style>

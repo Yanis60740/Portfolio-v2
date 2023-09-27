@@ -94,10 +94,6 @@ export default {
     display: flex;
     flex-direction: column;
   }
-  &__before {
-  }
-  &__after {
-  }
 }
 
 .secondSpan{

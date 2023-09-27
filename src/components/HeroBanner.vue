@@ -124,7 +124,6 @@ export default {
 .heroBanner {
     display: flex;
     justify-content: center;
-    margin-top: 69px;
     border-bottom: 1px solid $primary-color;
     &__container {
         display: flex;
