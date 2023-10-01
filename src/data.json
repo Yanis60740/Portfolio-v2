@@ -79,18 +79,20 @@
   "footer": {
     "name": "Footer",
     "contact": [
-      "yanisabid80000@gmail.com",
-      "06 71 25 72 55"
+      {
+        "mail": "yanisabid80000@gmail.com",
+        "phone": "06 71 25 72 55"
+      }
     ],
     "follow": [
       {
         "name": "github",
-        "icone": "../src/assets/icones/github.svg",
+        "icon": "github_light.svg",
         "link": "https://github.com/Yanis60740"
       },
       {
         "name": "linkedin",
-        "icone": "../src/assets/icones/linkedin.svg",
+        "icon": "linkedin.svg",
         "link": "https://www.linkedin.com/in/yanis-abid-8b1b3b1b4/"
       }
     ]

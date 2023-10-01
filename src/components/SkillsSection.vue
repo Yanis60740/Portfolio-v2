@@ -21,7 +21,6 @@ export default {
   name: "SkillsSection",
   data() {
     return {
-      section: jsonData,
       name:  jsonData.sections[1],
     };
   },

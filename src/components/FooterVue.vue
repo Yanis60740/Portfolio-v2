@@ -8,10 +8,27 @@
         <div class="footerVue__box">
             <div class="footerVue__box__container">
                 <div class="containerLeft">
-                    <div class="containerLeft__title"></div>
-                    <div class="containerLeft__contact"></div>
-                    <div class="containerLeft__follow"></div>
-                    <div class="containerLeft__followLinks"></div>
+                    <div class="containerLeft__content">
+                        <div class="containerLeft__content__contact">
+                            <div class="contact__title">
+                                Contact
+                            </div>
+                            <div class="contact__content">
+                                <span>{{ footerData.contact[0].mail }}</span><br>
+                                <span>{{ footerData.contact[0].phone }}</span>
+                            </div>
+                        </div>
+                        <div class="containerLeft__content__follow">
+                            <div class="follow__title">
+                                Follow me
+                            </div>
+                            <div class="follow__links">
+                                <div v-for="item in followLinks" :key="item.name">
+                                    <img :src="item.icon" :alt="item.name">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="containerRight"></div>
             </div>
@@ -21,11 +38,16 @@
 </template>
 
 <script>
+import jsonData from "../data.json";
 import gsap from "gsap";
 
 export default {
     name: 'FooterVue',
-    components: {
+    components: {},
+    data() {
+        return {
+            footerData: jsonData.footer,
+        };
     },
     methods: {
         setupBannerAnimation() {
@@ -41,6 +63,17 @@ export default {
                 duration: 5, 
             });
         },
+    },
+    computed: {
+        followLinks() {
+        if (this.footerData && this.footerData.follow) {
+            return this.footerData.follow.map(item => ({
+            ...item,
+            icon: require(`../assets/icones/${item.icon}`)
+            }));
+        }
+        return [];
+        }
     },
     mounted() {
         this.setupBannerAnimation();
@@ -80,7 +113,7 @@ export default {
         align-items: center;
         &__container{
             background: blue;
-            height: 350px;
+            height: 400px;
             width: 73%;
             display: flex;
             justify-content: space-between;
@@ -90,11 +123,52 @@ export default {
 
 .containerLeft{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     background: red;
     height: 100%;
-    width: 350px;
+    width: 450px;
+    color: $secondary-color;
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        &__contact{
+            height: 115px;
+            display: flex;
+            text-align: left;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: left;
+        }
+        &__follow{
+            font-family: $dela-gothic;
+            text-transform: uppercase;
+            height: 99px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+    
+}
+
+.contact__title{
+    font-family: $dela-gothic;
+    text-transform: uppercase;
+}
+.contact__content{
+    font-family: $open-sans;
+    font-size: $paragraph-size;
+    line-height: 37px;
+}
+
+.follow__title{
+    font-family: $dela-gothic;
+    text-transform: uppercase;
+}
+.follow__links{
+    display: flex;
 }
 
 .containerRight{
@@ -103,6 +177,7 @@ export default {
     justify-content: space-between;
     background: rgb(0, 219, 29);
     height: 100%;
-    width: 350px;
+    width: 450px;
+    
 }
 </style>

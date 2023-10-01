@@ -69,6 +69,7 @@ export default {
     
     &__text{
         text-align: left;
+        color: $primary-color;
     }
   }
   &__box:hover{
