@@ -1,4 +1,5 @@
 <template>
+    <div class="ancre" id="contact-me"></div>
     <div class="footerVue">
         <div class="footerVue__banner">
             <div class="footerVue__banner__text">
@@ -30,20 +31,45 @@
                         </div>
                     </div>
                 </div>
-                <div class="containerRight"></div>
+                <div class="containerRight">
+                    <a href="mailto:yanisabid80000@gmail.com">
+                        <ContactButton />
+                    </a>
+                    <!-- <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mknlpvyl" method="post">
+                        <fieldset id="fs-frm-inputs">
+                            <div class="containerRight__fieldBox">
+                                <input type="email" name="_replyto" id="email-address" placeholder="Email adress" required="">  
+                            </div>
+                            <div class="containerRight__fieldBox">
+                                <input type="text" name="name" id="subject" placeholder="Subject" required="">
+                            </div>
+                            <div class="containerRight__fieldBox">
+                                <input type="text" name="message" id="message" placeholder="Message" required="">
+                            </div>
+                        </fieldset>
+                        <input type="submit" value="Submit">
+                    </form> -->
+                </div>
             </div>
-            <div class="credits"></div>
         </div>
+        <div class="credits">
+                <div class="credits__content">
+                    Developed by <b>Yanis Abid</b> • Designed by <b>Noémie Heuzé</b>
+                </div>
+            </div>
     </div>
 </template>
 
 <script>
 import jsonData from "../data.json";
+import ContactButton from "./ContactButton.vue";
 import gsap from "gsap";
 
 export default {
     name: 'FooterVue',
-    components: {},
+    components: {
+        ContactButton,
+    },
     data() {
         return {
             footerData: jsonData.footer,
@@ -112,7 +138,6 @@ export default {
         justify-content: center;
         align-items: center;
         &__container{
-            background: blue;
             height: 400px;
             width: 73%;
             display: flex;
@@ -124,7 +149,6 @@ export default {
 .containerLeft{
     display: flex;
     justify-content: center;
-    background: red;
     height: 100%;
     width: 450px;
     color: $secondary-color;
@@ -174,10 +198,47 @@ export default {
 .containerRight{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    background: rgb(0, 219, 29);
+    justify-content: center;
     height: 100%;
     width: 450px;
-    
+    &__fieldBox{
+        background-color: $tertiary-color;
+        padding: 1px;
+        margin-bottom: 5px;
+        word-wrap: break-word;
+        & input{
+            background-color: $primary-color;
+            border-radius: 5px;
+            padding: 5px 5px; 
+            word-wrap: break-word;
+        }
+        &:nth-child(3){
+            & input{
+                height: 60px;
+            }
+        }
+        
+    }
+    // &__subject{
+    //     background-color: $tertiary-color;
+    //     padding: 1px;
+    //     margin-bottom: 5px;
+    // }
+    // &__message{
+    //     background-color: $tertiary-color;
+    //     padding: 1px;
+    //     margin-bottom: 5px;
+    // }
+}
+
+.credits{
+    background: $primary-color;
+    height: 40px;
+    width: 100%;
+    &__content{
+        color: $secondary-color;
+        font-family: $open-sans;
+        font-size: $small-size;
+    }
 }
 </style>

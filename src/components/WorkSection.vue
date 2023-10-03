@@ -52,7 +52,7 @@ export default {
             width: 75%;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: space-around;
         }
     }
 }

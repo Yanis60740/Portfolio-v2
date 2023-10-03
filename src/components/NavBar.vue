@@ -41,10 +41,9 @@ export default {
     setupSwitchAnimation() {
       const switchButton = this.$el.querySelector(".navBar__switch");
       const switchCircle = this.$el.querySelector(".navBar__switch__circle");
-        const duree = 0.4;
+      const duree = 0.4;
       switchButton.addEventListener("click", () => {
         this.isSwitched = !this.isSwitched;
-
         if (this.isSwitched) {
             console.log("switched");
           gsap.to(switchCircle, {
@@ -58,6 +57,7 @@ export default {
                 duration: duree,
                 ease : "power2.inOut"
             });
+
         } else {
             console.log("no switch");
             gsap.to(switchCircle, {
@@ -73,6 +73,7 @@ export default {
             });
             
         }
+
       });
     },
   },

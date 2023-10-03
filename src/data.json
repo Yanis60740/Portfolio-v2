@@ -3,7 +3,10 @@
   "sections": [
     {
       "name": "About me",
-      "accroche": ["Hello !","I'm Yanis Abid,"],
+      "accroche": [
+        "Hello !",
+        "I'm Yanis Abid,"
+      ],
       "content": [
         "I am a junior web developer with a passion for creating functional websites and applications. ",
         "My passion for programming has driven me to constantly learn new skills and technologies to improve my projects.",
@@ -14,7 +17,6 @@
       "localisation": "Amiens, Bordeaux, Biarritz",
       "photo": "../src/assets/images/illustration.svg"
     },
-
     {
       "name": "Skills",
       "skills": [
@@ -23,8 +25,8 @@
           "icon": "c.svg"
         },
         {
-          "name": "java",
-          "icon": "java.svg"
+          "name": "vue",
+          "icon": "vue.svg"
         },
         {
           "name": "mysql",
@@ -48,33 +50,27 @@
       "name": "Work",
       "project": [
         {
-            "name": "car game",
-            "type": "single player game",
-            "icon": "illustration.svg"
-          },
-          {
-            "name": "chess game",
-            "type": "multiplayer player game",
-            "icon": "illustration.svg"
-          },
-          {
-            "name": "yanis abid",
-            "type": "portfolio",
-            "icon": "illustration.svg"
-          },
-          {
-            "name": "energie watt",
-            "type": "application de simulation de taxes",
-            "icon": "illustration.svg"
-          },
-          {
-            "name": "renta&co",
-            "type": "application de gestion pour boulangerie",
-            "icon": "illustration.svg"
-          }
+          "name": "yanis abid",
+          "type": "portfolio v1",
+          "icon": "portfolio_v1.png"
+        },
+        {
+          "name": "energie watt",
+          "type": "application de simulation de taxes",
+          "icon": "energiewatt.png"
+        },
+        {
+          "name": "renta&co",
+          "type": "application de gestion pour boulangerie",
+          "icon": "rentandco.png"
+        },
+        {
+          "name": "yanis abid",
+          "type": "portfolio v2",
+          "icon": "portfolio_v2.png"
+        }
       ]
     }
-    
   ],
   "footer": {
     "name": "Footer",

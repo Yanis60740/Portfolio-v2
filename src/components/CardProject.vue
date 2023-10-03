@@ -61,15 +61,21 @@ export default {
     padding: 16px;
     box-sizing: border-box;
     &__illustration{
+      margin-bottom: 20px;
         & img{
             filter: grayscale(100%);
             transition: filter 0.3s;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            object-fit: cover;
+            aspect-ratio: 2/1;
         }
     }
-    
     &__text{
         text-align: left;
         color: $primary-color;
+        border-top: 2px solid $primary-color;
     }
   }
   &__box:hover{
