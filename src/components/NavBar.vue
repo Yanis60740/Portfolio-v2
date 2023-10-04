@@ -11,9 +11,9 @@
           {{ section.name.toUpperCase() }}
         </a>
         <a href="#contact-me">CONTACT ME</a>
-        <div class="navBar__switch">
+        <!-- <div class="navBar__switch">
           <div class="navBar__switch__circle"></div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -21,61 +21,60 @@
 
 <script>
 import jsonData from "../data.json";
-import gsap from "gsap";
+// import gsap from "gsap";
 export default {
   name: "NavBar",
   components: {},
   data() {
     return {
       sections: jsonData.sections,
-      isSwitched: false,
+      // isSwitched: false,
     };
   },
-  mounted() {
-    this.setupSwitchAnimation();
-  },
+  // mounted() {
+  //   this.setupSwitchAnimation();
+  // },
   methods: {
     formatHref(name) {
       return "#" + name.toLowerCase().split(" ").join("-");
     },
-    setupSwitchAnimation() {
-      const switchButton = this.$el.querySelector(".navBar__switch");
-      const switchCircle = this.$el.querySelector(".navBar__switch__circle");
-      const duree = 0.4;
-      switchButton.addEventListener("click", () => {
-        this.isSwitched = !this.isSwitched;
-        if (this.isSwitched) {
-            console.log("switched");
-          gsap.to(switchCircle, {
-            x: "24px",
-            duration: duree,
-            ease : "power2.inOut",
-            background: "#343434"
-            });
-            gsap.to(switchButton, {
-                background: "linear-gradient(to bottom, #CDB4BF, #F2F2F2)",
-                duration: duree,
-                ease : "power2.inOut"
-            });
+    // setupSwitchAnimation() {
+    //   const switchButton = this.$el.querySelector(".navBar__switch");
+    //   const switchCircle = this.$el.querySelector(".navBar__switch__circle");
+    //   const duree = 0.4;
+    //   switchButton.addEventListener("click", () => {
+    //     this.isSwitched = !this.isSwitched;
+    //     if (this.isSwitched) {
+    //         console.log("switched");
+    //       gsap.to(switchCircle, {
+    //         x: "24px",
+    //         duration: duree,
+    //         ease : "power2.inOut",
+    //         background: "#343434"
+    //         });
+    //         gsap.to(switchButton, {
+    //             background: "linear-gradient(to bottom, #CDB4BF, #F2F2F2)",
+    //             duration: duree,
+    //             ease : "power2.inOut"
+    //         });
+    //     } else {
+    //         console.log("no switch");
+    //         gsap.to(switchCircle, {
+    //         x: "1px",
+    //         duration: duree,
+    //         ease : "power2.inOut",
+    //         background: "linear-gradient(to bottom, #CDB4BF, #F2F2F2)"
+    //         });
+    //         gsap.to(switchButton, {
+    //             background: "#343434",
+    //             duration: duree,
+    //             ease : "power2.inOut"
+    //         });
+    //     }
 
-        } else {
-            console.log("no switch");
-            gsap.to(switchCircle, {
-            x: "1px",
-            duration: duree,
-            ease : "power2.inOut",
-            background: "linear-gradient(to bottom, #CDB4BF, #F2F2F2)"
-            });
-            gsap.to(switchButton, {
-                background: "#343434",
-                duration: duree,
-                ease : "power2.inOut"
-            });
-            
-        }
-
-      });
-    },
+        
+    //   });
+    // },
   },
 };
 </script>
@@ -113,9 +112,9 @@ export default {
   &__links {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    width: 60%;
+    width: 80%;
     & a {
       font-family: $open-sans;
       color: $primary-color;
