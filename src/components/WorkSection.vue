@@ -38,6 +38,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../css/variables.scss";
+@import '../css/responsive.css';
 
 .workSection{
     border-bottom: 1px solid $primary-color;

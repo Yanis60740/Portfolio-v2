@@ -1,0 +1,13 @@
+@media only screen and (max-width: 900px){
+    .navbar{
+        font-size: 10px;
+      }
+
+    h1, h2{
+      font-size: 46px;
+    }
+  
+    .heroBanner__container__right{
+        display: none;
+    }
+  }

@@ -120,6 +120,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../css/variables.scss";
+@import '../css/responsive.css';
 
 .heroBanner {
     display: flex;
@@ -218,4 +219,11 @@ export default {
         left: 65%;
         transform: translate(-50%, -50%);
     }
-}</style>
+}
+
+@media only screen and (max-width: 900px){
+    .heroBanner__container__right{
+        display: none;
+    }
+  }
+  </style>

@@ -17,6 +17,7 @@ import WorkSection from './components/WorkSection.vue'
 import FooterVue from './components/FooterVue.vue'
 
 
+
 export default {
   name: 'App',
   components: {
@@ -32,6 +33,7 @@ export default {
 
 <style lang="scss">
 @import "./css/global.scss";
+@import './css/responsive.css';
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

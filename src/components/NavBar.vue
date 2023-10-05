@@ -81,6 +81,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../css/variables.scss";
+@import '../css/responsive.css';
 .navContainer {
   display: flex;
   justify-content: center;
@@ -105,6 +106,7 @@ export default {
     color: $primary-color;
     font-family: $dela-gothic;
     font-weight: 400;
+    text-align: left;
     & a {
       color: $primary-color;
     }
@@ -138,5 +140,11 @@ export default {
       left: 1px;
     }
   }
+}
+
+@media only screen and (max-width: 900px){
+  .navBar {
+      font-size: 12px;
+    }
 }
 </style>

@@ -46,6 +46,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../css/variables.scss";
+@import '../css/responsive.css';
 
 .aboutMe {
   border-bottom: 1px solid $primary-color;
@@ -108,5 +109,21 @@ export default {
   width: 100%;
   padding: 95px 0;
   box-sizing: border-box;
+}
+
+@media only screen and (max-width: 900px){
+  .aboutMe {
+    &__content{
+      flex-direction: column;
+      &__left{
+        padding: 30px 0;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  .buttonBox{
+    padding: 30px 0;
+  }
 }
 </style>

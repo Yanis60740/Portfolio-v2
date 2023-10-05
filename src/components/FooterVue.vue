@@ -109,6 +109,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../css/variables.scss";
+@import '../css/responsive.css';
 
 .footerVue{
     &__banner{
@@ -241,4 +242,16 @@ export default {
         font-size: $small-size;
     }
 }
+
+@media only screen and (max-width: 900px){
+    .footerVue{
+        &__box{
+            &__container{
+                width: unset;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
 </style>

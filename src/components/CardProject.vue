@@ -45,6 +45,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../css/variables.scss";
+@import '../css/responsive.css';
 
 .cardProject {
   background: #343434;
