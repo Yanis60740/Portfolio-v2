@@ -90,6 +90,7 @@ export default {
         display: flex;
         align-items: center;
         text-align: left;
+        margin-left: -5px;
       }
     }
     
@@ -111,19 +112,34 @@ export default {
   box-sizing: border-box;
 }
 
-@media only screen and (max-width: 900px){
+
+
+@media only screen and (max-width: 570px){
   .aboutMe {
     &__content{
       flex-direction: column;
+      align-items: center;
       &__left{
-        padding: 30px 0;
+        padding-top: 30px;
         box-sizing: border-box;
+        width: none;
       }
     }
   }
 
   .buttonBox{
     padding: 30px 0;
+    margin-left: -34px;
+    width: 194.97px;
   }
 }
+
+// @media only screen and (min-width: 570px) and (max-width: 900px){
+//   .aboutMe {
+//     &__content{
+//       flex-direction: none;
+//       align-items: none;
+//     }
+//   }
+// }
 </style>

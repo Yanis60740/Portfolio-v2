@@ -221,9 +221,37 @@ export default {
     }
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 899px){
     .heroBanner__container__right{
         display: none;
     }
   }
+
+@media only screen and (min-width: 900px) and (max-width: 1039px){
+    .heroBanner__container__right{
+        margin-right: -20%;
+    }
+
+    .bg {
+        width: 60px;
+        height: 60px;
+        & img{
+            width: 60px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1040px) and (max-width: 1245px){
+    .heroBanner__container__right{
+        margin-right: -15%;
+    }
+
+    .bg {
+        width: 60px;
+        height: 60px;
+        & img{
+            width: 60px;
+        }
+    }
+}
   </style>
