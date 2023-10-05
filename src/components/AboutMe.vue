@@ -107,8 +107,8 @@ export default {
 .buttonBox {
   display: flex;
   justify-content: flex-start;
-  width: 100%;
-  padding: 95px 0;
+  width: 194.97px;
+  padding: 60px 0;
   box-sizing: border-box;
 }
 
@@ -128,18 +128,26 @@ export default {
   }
 
   .buttonBox{
-    padding: 30px 0;
+    padding: 15px 0;
     margin-left: -34px;
-    width: 194.97px;
   }
 }
 
-// @media only screen and (min-width: 570px) and (max-width: 900px){
-//   .aboutMe {
-//     &__content{
-//       flex-direction: none;
-//       align-items: none;
-//     }
-//   }
-// }
+@media only screen and (min-width: 570px) and (max-width: 1100px){
+  .aboutMe {
+    &__content{
+      width: unset;
+      &__left{
+        margin-left: 40px;
+      }
+      &__right{
+        margin-right: 40px;
+      }
+    }
+  }
+
+  .buttonBox{
+    padding: 15px 0;
+  }
+}
 </style>

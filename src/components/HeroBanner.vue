@@ -95,7 +95,7 @@ export default {
                 yoyo: true,
             });
             gsap.to(hi, {
-                scale: 1,
+                scale: 0.9,
                 duration: duree,
                 repeatDelay: 0.8,
                 ease: "elastic.out(1.4, 0.7)",
@@ -221,18 +221,27 @@ export default {
     }
 }
 
-@media only screen and (max-width: 899px){
-    .heroBanner__container__right{
-        display: none;
+@media only screen and (max-width: 930px){
+    .heroBanner{
+        &__container{
+            &__right{
+                display: none;
+            }
+        }
     }
   }
 
-@media only screen and (min-width: 900px) and (max-width: 1039px){
+@media only screen and (min-width: 930px) and (max-width: 1040px){
     .heroBanner__container__right{
         margin-right: -20%;
     }
 
     .bg {
+        width: 60px;
+        height: 60px;
+    }
+
+    .bg:nth-child(6){
         width: 60px;
         height: 60px;
         & img{
@@ -247,6 +256,11 @@ export default {
     }
 
     .bg {
+        width: 60px;
+        height: 60px;
+    }
+
+    .bg:nth-child(6){
         width: 60px;
         height: 60px;
         & img{
