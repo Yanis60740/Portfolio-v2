@@ -95,7 +95,7 @@ export default {
                 yoyo: true,
             });
             gsap.to(hi, {
-                scale: 1,
+                scale: 0.9,
                 duration: duree,
                 repeatDelay: 0.8,
                 ease: "elastic.out(1.4, 0.7)",
@@ -218,4 +218,53 @@ export default {
         left: 65%;
         transform: translate(-50%, -50%);
     }
-}</style>
+}
+
+@media only screen and (max-width: 930px){
+    .heroBanner{
+        &__container{
+            &__right{
+                display: none;
+            }
+        }
+    }
+  }
+
+@media only screen and (min-width: 930px) and (max-width: 1040px){
+    .heroBanner__container__right{
+        margin-right: -20%;
+    }
+
+    .bg {
+        width: 60px;
+        height: 60px;
+    }
+
+    .bg:nth-child(6){
+        width: 60px;
+        height: 60px;
+        & img{
+            width: 60px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1040px) and (max-width: 1245px){
+    .heroBanner__container__right{
+        margin-right: -15%;
+    }
+
+    .bg {
+        width: 60px;
+        height: 60px;
+    }
+
+    .bg:nth-child(6){
+        width: 60px;
+        height: 60px;
+        & img{
+            width: 60px;
+        }
+    }
+}
+  </style>

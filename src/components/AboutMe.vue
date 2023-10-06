@@ -62,12 +62,13 @@ export default {
       height: 100%;
       width: 40%;
       & div {
-        background-image: url("../assets/images/illustration.svg");
+        background-image: url("../assets/images/yanis.jpg");
         border-radius: 50%;
         aspect-ratio: 1/1;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        filter: grayscale(100%);
         width: 320px;
       }
     }
@@ -89,6 +90,7 @@ export default {
         display: flex;
         align-items: center;
         text-align: left;
+        margin-left: -5px;
       }
     }
     
@@ -105,8 +107,47 @@ export default {
 .buttonBox {
   display: flex;
   justify-content: flex-start;
-  width: 100%;
-  padding: 95px 0;
+  width: 194.97px;
+  padding: 60px 0;
   box-sizing: border-box;
+}
+
+
+
+@media only screen and (max-width: 570px){
+  .aboutMe {
+    &__content{
+      flex-direction: column;
+      align-items: center;
+      &__left{
+        padding-top: 30px;
+        box-sizing: border-box;
+        width: none;
+      }
+    }
+  }
+
+  .buttonBox{
+    padding: 15px 0;
+    margin-left: -34px;
+  }
+}
+
+@media only screen and (min-width: 570px) and (max-width: 1100px){
+  .aboutMe {
+    &__content{
+      width: unset;
+      &__left{
+        margin-left: 40px;
+      }
+      &__right{
+        margin-right: 40px;
+      }
+    }
+  }
+
+  .buttonBox{
+    padding: 15px 0;
+  }
 }
 </style>

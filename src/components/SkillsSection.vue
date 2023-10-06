@@ -62,11 +62,29 @@ export default {
           background: linear-gradient(to bottom, #CDB4FF, #F2F2F2);
           box-shadow: 6px 6px #343434;
           border: 1px $primary-color solid;
+          margin-bottom: 10px;
         }
         & div:not(:first-child){
+          margin-right: -25px;
+        }
+        & div:nth-child(2){
           margin-left: -25px;
         }
     }
   }
+}
+
+@media only screen and (max-width: 900px){
+    .skillsSection{
+      &__box{
+        &__container{
+          flex-wrap: wrap;
+          & div{
+            width: 120px;
+            height: 120px;
+          }
+        }
+      }
+    }
 }
 </style>

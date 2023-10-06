@@ -17,6 +17,7 @@ import WorkSection from './components/WorkSection.vue'
 import FooterVue from './components/FooterVue.vue'
 
 
+
 export default {
   name: 'App',
   components: {
