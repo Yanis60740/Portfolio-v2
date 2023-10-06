@@ -109,7 +109,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "../css/variables.scss";
-@import '../css/responsive.css';
 
 .footerVue{
     &__banner{

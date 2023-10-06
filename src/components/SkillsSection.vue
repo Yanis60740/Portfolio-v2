@@ -42,7 +42,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "../css/variables.scss";
-@import '../css/responsive.css';
 
 .skillsSection{
   border-bottom: 1px solid $primary-color;

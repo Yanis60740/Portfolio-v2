@@ -33,7 +33,6 @@ export default {
 
 <style lang="scss">
 @import "./css/global.scss";
-@import './css/responsive.css';
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

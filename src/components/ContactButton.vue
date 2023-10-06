@@ -71,7 +71,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "../css/variables.scss";
-@import '../css/responsive.css';
 .contactButton {
   padding: 16px 40px;
   background: $gradient-color;

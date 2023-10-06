@@ -46,7 +46,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "../css/variables.scss";
-@import '../css/responsive.css';
 
 .aboutMe {
   border-bottom: 1px solid $primary-color;
@@ -63,12 +62,13 @@ export default {
       height: 100%;
       width: 40%;
       & div {
-        background-image: url("../assets/images/illustration.svg");
+        background-image: url("../assets/images/yanis.jpg");
         border-radius: 50%;
         aspect-ratio: 1/1;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        filter: grayscale(100%);
         width: 320px;
       }
     }
