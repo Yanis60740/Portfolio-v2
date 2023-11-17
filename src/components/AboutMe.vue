@@ -1,26 +1,26 @@
 <template>
   <div class="ancre" id="about-me"></div>
-  <div class="aboutMe">
-    <div class="sectionTitle">
-      <h2>{{ section.name.toUpperCase() }}</h2>
+  <div class="aboutMe" :class="[$store.getters.themeClasses, $store.getters.themeClassesBorder]">
+    <div class="sectionTitle" :class="[$store.getters.themeClasses, $store.getters.themeClassesBorder]">
+      <h2 :class="$store.getters.themeClasses">{{ section.name.toUpperCase() }}</h2>
     </div>
     <div class="aboutMe__box">
       <div class="aboutMe__content">
         <div class="aboutMe__content__left">
           <div></div>
         </div>
-        <div class="aboutMe__content__right">
+        <div class="aboutMe__content__right" :class="$store.getters.themeClasses">
           <div v-for="accroche in section.accroche" :key="accroche">
-            <h3>{{ accroche.toUpperCase() }}</h3>
+            <h3 :class="$store.getters.themeClasses">{{ accroche.toUpperCase() }}</h3>
           </div>
           <div v-for="paragraph in section.content" :key="paragraph">
             <p>{{ paragraph }}</p>
           </div>
           <div>
-            <img :src="iconPath" alt="icon_localisation">
+            <div class="icon_localisation" :class="$store.getters.themeClassesPosition"></div>
             <span>{{ section.localisation }}</span>
           </div>
-          <div class="buttonBox"><ContactButton /></div>
+          <a href="#contact-me" class="buttonBox"><ContactButton /></a>
         </div>
       </div>
     </div>
@@ -107,12 +107,18 @@ export default {
 .buttonBox {
   display: flex;
   justify-content: flex-start;
-  width: 194.97px;
-  padding: 60px 0;
+  min-width: 194.97px;
+  padding: 60px 0 0;
   box-sizing: border-box;
 }
 
-
+.icon_localisation{
+    background: url("../assets/icones/position_icon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+}
 
 @media only screen and (max-width: 570px){
   .aboutMe {
@@ -124,12 +130,14 @@ export default {
         box-sizing: border-box;
         width: none;
       }
+      &__right{
+        width: 80%;
+      }
     }
   }
 
   .buttonBox{
-    padding: 15px 0;
-    margin-left: -34px;
+    padding: 15px 0 0;
   }
 }
 
@@ -147,7 +155,7 @@ export default {
   }
 
   .buttonBox{
-    padding: 15px 0;
+    padding: 15px 0 0;
   }
 }
 </style>

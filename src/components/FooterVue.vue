@@ -1,14 +1,14 @@
 <template>
     <div class="ancre" id="contact-me"></div>
     <div class="footerVue">
-        <div class="footerVue__banner">
-            <div class="footerVue__banner__text">
+        <div class="footerVue__banner" :class="[$store.getters.themeClassesInversed, $store.getters.themeClassesBorderInversed]">
+            <div class="footerVue__banner__text" :class="$store.getters.themeClassesColor">
                 Get in touch
             </div>
         </div>
-        <div class="footerVue__box">
-            <div class="footerVue__box__container">
-                <div class="containerLeft">
+        <div class="footerVue__box" :class="[$store.getters.themeClassesInversed, $store.getters.themeClassesBorderInversed]">
+            <div class="footerVue__box__container" :class="$store.getters.themeClassesColor">
+                <div class="containerLeft" :class="$store.getters.themeClassesColor">
                     <div class="containerLeft__content">
                         <div class="containerLeft__content__contact">
                             <div class="contact__title">
@@ -24,9 +24,8 @@
                                 Follow me
                             </div>
                             <div class="follow__links">
-                                <div v-for="item in followLinks" :key="item.name">
-                                    <img :src="item.icon" :alt="item.name">
-                                </div>
+                                <a href="https://github.com/Yanis60740"><div class="github" :class="$store.getters.themeClassesGithub"></div></a>
+                                <a href="https://www.linkedin.com/in/yanis-abid-418020263/"><div class="linkedin" :class="$store.getters.themeClassesLinkedin"></div></a>
                             </div>
                         </div>
                     </div>
@@ -52,11 +51,11 @@
                 </div>
             </div>
         </div>
-        <div class="credits">
-                <div class="credits__content">
-                    Developed by <b>Yanis Abid</b> • Designed by <b>Noémie Heuzé</b>
-                </div>
+        <div class="credits" :class="[$store.getters.themeClassesInversed]">
+            <div class="credits__content" :class="[$store.getters.themeClassesColor]">
+                Developed by <b>Yanis Abid</b> • Designed by <b>Noémie Heuzé</b>
             </div>
+        </div>
     </div>
 </template>
 
@@ -85,7 +84,7 @@ export default {
                 defaults: { ease: "linear" }
             });
             tl.to(bannerText, {
-                x: -textWidth*1.4, 
+                x: -textWidth*2.5, 
                 duration: 5, 
             });
         },
@@ -219,16 +218,22 @@ export default {
         }
         
     }
-    // &__subject{
-    //     background-color: $tertiary-color;
-    //     padding: 1px;
-    //     margin-bottom: 5px;
-    // }
-    // &__message{
-    //     background-color: $tertiary-color;
-    //     padding: 1px;
-    //     margin-bottom: 5px;
-    // }
+}
+
+.github{
+    background: url("../assets/icones/github_light.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+}
+
+.linkedin{
+    background: url("../assets/icones/linkedin_light.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
 }
 
 .credits{
@@ -239,6 +244,14 @@ export default {
         color: $secondary-color;
         font-family: $open-sans;
         font-size: $small-size;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .credits{
+        &__content{
+            font-size: 12px;
+        }
     }
 }
 

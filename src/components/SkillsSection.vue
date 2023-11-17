@@ -1,8 +1,8 @@
 <template>
     <div class="ancre" id="skills"></div>
-    <div class="skillsSection">
-        <div class="sectionTitle">
-            <h2>{{ name.name.toUpperCase() }}</h2>
+    <div class="skillsSection" :class="[$store.getters.themeClasses, $store.getters.themeClassesBorder]">
+        <div class="sectionTitle" :class="[$store.getters.themeClasses, $store.getters.themeClassesBorder]">
+            <h2 :class="$store.getters.themeClasses">{{ name.name.toUpperCase() }}</h2>
         </div>
         <div class="skillsSection__box">
           <div class="skillsSection__box__container">
@@ -50,6 +50,8 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 30px 0;
+    box-sizing: border-box;
     &__container{
         display: flex;
         & div{
