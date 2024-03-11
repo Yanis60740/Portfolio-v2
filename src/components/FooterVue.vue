@@ -31,23 +31,23 @@
                     </div>
                 </div>
                 <div class="containerRight">
-                    <a href="mailto:yanisabid80000@gmail.com">
+                    <!-- <a href="mailto:yanisabid80000@gmail.com">
                         <ContactButton />
-                    </a>
-                    <!-- <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mknlpvyl" method="post">
+                    </a> -->
+                    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mknlpvyl" method="post">
                         <fieldset id="fs-frm-inputs">
                             <div class="containerRight__fieldBox">
-                                <input type="email" name="_replyto" id="email-address" placeholder="Email adress" required="">  
+                                <textarea type="email" name="_replyto" id="email-address" placeholder="Email adress" required="" autocomplete="off" :class="[$store.getters.themeClassesBg, $store.getters.themeClassesColor]"></textarea>
                             </div>
                             <div class="containerRight__fieldBox">
-                                <input type="text" name="name" id="subject" placeholder="Subject" required="">
+                                <textarea name="name" id="subject" placeholder="Subject" required="" autocomplete="off" :class="[$store.getters.themeClassesColor]"></textarea>
                             </div>
                             <div class="containerRight__fieldBox">
-                                <input type="text" name="message" id="message" placeholder="Message" required="">
+                                <textarea name="message" id="message" placeholder="Message" required="" autocomplete="off" :class="[$store.getters.themeClassesColor]"></textarea>
                             </div>
                         </fieldset>
-                        <input type="submit" value="Submit">
-                    </form> -->
+                        <ContactButton type="submit" value="Submit"/>
+                    </form>
                 </div>
             </div>
         </div>
@@ -203,17 +203,26 @@ export default {
     &__fieldBox{
         background-color: $tertiary-color;
         padding: 1px;
-        margin-bottom: 5px;
+        margin-bottom: 8px;
         word-wrap: break-word;
-        & input{
+        & textarea{
             background-color: $primary-color;
-            border-radius: 5px;
-            padding: 5px 5px; 
+            border-radius: 16px;
+            padding: 17px; 
             word-wrap: break-word;
-        }
+            width: 350px;
+            max-width: 100%;
+            height: 50px;
+            max-height: 50px;
+            white-space: pre-wrap;
+            box-sizing: border-box;
+            color: #F2F2F2;
+            display: block;
+        }   
         &:nth-child(3){
-            & input{
-                height: 60px;
+            & textarea{
+                height: 120px;
+                max-height: 240px;
             }
         }
         
