@@ -1,9 +1,9 @@
 <template>
-    <section class="heroBanner" id="index">
+    <section class="heroBanner" id="index" :class="[$store.getters.themeClasses, $store.getters.themeClassesBorder]">
         <div class="heroBanner__container">
             <div class="heroBanner__container__left">
-                <h1>{{ title.toUpperCase() }}</h1>
-                <ContactButton />
+                <h1 :class="$store.getters.themeClasses">{{ title.toUpperCase() }}</h1>
+                <a href="#contact-me"><ContactButton /></a>
             </div>
             <div class="heroBanner__container__right">
                 <div class="bg">
@@ -122,6 +122,7 @@ export default {
 @import "../css/variables.scss";
 
 .heroBanner {
+    margin-top: -3px;
     display: flex;
     justify-content: center;
     border-bottom: 1px solid $primary-color;

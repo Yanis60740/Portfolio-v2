@@ -1,14 +1,14 @@
 <template>
     <div class="ancre" id="contact-me"></div>
     <div class="footerVue">
-        <div class="footerVue__banner">
-            <div class="footerVue__banner__text">
+        <div class="footerVue__banner" :class="[$store.getters.themeClassesInversed, $store.getters.themeClassesBorderInversed]">
+            <div class="footerVue__banner__text" :class="$store.getters.themeClassesColor">
                 Get in touch
             </div>
         </div>
-        <div class="footerVue__box">
-            <div class="footerVue__box__container">
-                <div class="containerLeft">
+        <div class="footerVue__box" :class="[$store.getters.themeClassesInversed, $store.getters.themeClassesBorderInversed]">
+            <div class="footerVue__box__container" :class="$store.getters.themeClassesColor">
+                <div class="containerLeft" :class="$store.getters.themeClassesColor">
                     <div class="containerLeft__content">
                         <div class="containerLeft__content__contact">
                             <div class="contact__title">
@@ -24,39 +24,38 @@
                                 Follow me
                             </div>
                             <div class="follow__links">
-                                <div v-for="item in followLinks" :key="item.name">
-                                    <img :src="item.icon" :alt="item.name">
-                                </div>
+                                <a href="https://github.com/Yanis60740"><div class="github" :class="$store.getters.themeClassesGithub"></div></a>
+                                <a href="https://www.linkedin.com/in/yanis-abid-418020263/"><div class="linkedin" :class="$store.getters.themeClassesLinkedin"></div></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="containerRight">
-                    <a href="mailto:yanisabid80000@gmail.com">
+                    <!-- <a href="mailto:yanisabid80000@gmail.com">
                         <ContactButton />
-                    </a>
-                    <!-- <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mknlpvyl" method="post">
+                    </a> -->
+                    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mknlpvyl" method="post">
                         <fieldset id="fs-frm-inputs">
                             <div class="containerRight__fieldBox">
-                                <input type="email" name="_replyto" id="email-address" placeholder="Email adress" required="">  
+                                <textarea type="email" name="_replyto" id="email-address" placeholder="Email adress" required="" autocomplete="off" :class="[$store.getters.themeClassesBg, $store.getters.themeClassesColor]"></textarea>
                             </div>
                             <div class="containerRight__fieldBox">
-                                <input type="text" name="name" id="subject" placeholder="Subject" required="">
+                                <textarea name="name" id="subject" placeholder="Subject" required="" autocomplete="off" :class="[$store.getters.themeClassesColor]"></textarea>
                             </div>
                             <div class="containerRight__fieldBox">
-                                <input type="text" name="message" id="message" placeholder="Message" required="">
+                                <textarea name="message" id="message" placeholder="Message" required="" autocomplete="off" :class="[$store.getters.themeClassesColor]"></textarea>
                             </div>
                         </fieldset>
-                        <input type="submit" value="Submit">
-                    </form> -->
+                        <ContactButton type="submit" value="Submit"/>
+                    </form>
                 </div>
             </div>
         </div>
-        <div class="credits">
-                <div class="credits__content">
-                    Developed by <b>Yanis Abid</b> • Designed by <b>Noémie Heuzé</b>
-                </div>
+        <div class="credits" :class="[$store.getters.themeClassesInversed]">
+            <div class="credits__content" :class="[$store.getters.themeClassesColor]">
+                Developed by <b>Yanis Abid</b> • Designed by <b>Noémie Heuzé</b>
             </div>
+        </div>
     </div>
 </template>
 
@@ -85,7 +84,7 @@ export default {
                 defaults: { ease: "linear" }
             });
             tl.to(bannerText, {
-                x: -textWidth*1.4, 
+                x: -textWidth*2.5, 
                 duration: 5, 
             });
         },
@@ -204,31 +203,46 @@ export default {
     &__fieldBox{
         background-color: $tertiary-color;
         padding: 1px;
-        margin-bottom: 5px;
+        margin-bottom: 8px;
         word-wrap: break-word;
-        & input{
+        & textarea{
             background-color: $primary-color;
-            border-radius: 5px;
-            padding: 5px 5px; 
+            border-radius: 16px;
+            padding: 17px; 
             word-wrap: break-word;
-        }
+            width: 350px;
+            max-width: 100%;
+            height: 50px;
+            max-height: 50px;
+            white-space: pre-wrap;
+            box-sizing: border-box;
+            color: #F2F2F2;
+            display: block;
+        }   
         &:nth-child(3){
-            & input{
-                height: 60px;
+            & textarea{
+                height: 120px;
+                max-height: 240px;
             }
         }
         
     }
-    // &__subject{
-    //     background-color: $tertiary-color;
-    //     padding: 1px;
-    //     margin-bottom: 5px;
-    // }
-    // &__message{
-    //     background-color: $tertiary-color;
-    //     padding: 1px;
-    //     margin-bottom: 5px;
-    // }
+}
+
+.github{
+    background: url("../assets/icones/github_light.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+}
+
+.linkedin{
+    background: url("../assets/icones/linkedin_light.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
 }
 
 .credits{
@@ -239,6 +253,14 @@ export default {
         color: $secondary-color;
         font-family: $open-sans;
         font-size: $small-size;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .credits{
+        &__content{
+            font-size: 12px;
+        }
     }
 }
 

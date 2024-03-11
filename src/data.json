@@ -47,7 +47,7 @@
       ]
     },
     {
-      "name": "Work",
+      "name": "Works",
       "project": [
         {
           "name": "yanis abid",
@@ -88,7 +88,7 @@
       },
       {
         "name": "linkedin",
-        "icon": "linkedin.svg",
+        "icon": "linkedin_light.svg",
         "link": "https://www.linkedin.com/in/yanis-abid-8b1b3b1b4/"
       }
     ]

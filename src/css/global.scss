@@ -1,28 +1,42 @@
 @import "../css/variables.scss";
-body{
+
+body {
     background-color: $secondary-color;
     font-family: $dela-gothic;
     margin: 0;
 }
 
-a{
+textarea{
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    resize: none;
+}
+
+a {
     text-decoration: none;
 }
 
-section{
+section {
     padding: 80px 17%;
     width: 100%;
     box-sizing: border-box;
 }
 
-h1,h2{
+h1,
+h2 {
     font-family: $dela-gothic;
     color: $primary-color;
     font-size: $title-size;
     margin: 0;
 }
 
-h3{
+h3 {
     font-family: $dela-gothic;
     color: $primary-color;
     font-size: $subtitle-size;
@@ -30,7 +44,7 @@ h3{
     margin: 0;
 }
 
-h4{
+h4 {
     font-family: $open-sans;
     color: $primary-color;
     font-size: 19px;
@@ -38,12 +52,12 @@ h4{
     margin: 0;
 }
 
-b{
+b {
     margin: 0;
 }
 
 
-button{
+button {
     background: none;
     color: inherit;
     border: none;
@@ -51,36 +65,107 @@ button{
     font: inherit;
     cursor: pointer;
     outline: inherit;
-    -webkit-appearance: none;  /* Remove styles added by Webkit browsers (like Chrome, Safari) */
-    -moz-appearance: none;     /* Remove styles added by Firefox */
-    appearance: none;          /* General rule to remove certain platform-specific styles */
+    -webkit-appearance: none;
+    /* Remove styles added by Webkit browsers (like Chrome, Safari) */
+    -moz-appearance: none;
+    /* Remove styles added by Firefox */
+    appearance: none;
+    /* General rule to remove certain platform-specific styles */
 }
 
-.sectionTitle{
+.sectionTitle {
     padding: 20px 0;
     box-sizing: border-box;
     border-bottom: 1px solid $primary-color;
 }
 
-.ancre{
+.ancre {
     position: relative;
     top: -56px;
     visibility: hidden;
 }
 
-fieldset{
+fieldset {
     border: none;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-input{
+input {
     all: initial;
 }
 
-@media only screen and (max-width: 900px){
-    h1, h2{
-      font-size: 46px;
+.light-mode {
+    background-color: #F2F2F2 !important;
+    color: #323232 !important;
+}
+
+.dark-mode {
+    background-color: #323232 !important;
+    color: #F2F2F2 !important;
+}
+
+.border-light {
+    border-bottom: 1px solid #F2F2F2 !important;
+}
+
+.border-dark {
+    border-bottom: 1px solid #323232 !important;
+}
+
+.bg-light {
+    background-color: #323232 !important;
+}
+
+.bg-dark {
+    background-color: #F2F2F2 !important;
+}
+
+.light {
+    color: #F2F2F2 !important;
+}
+
+.dark {
+    color: #323232 !important;
+}
+
+.position-light {
+    background: url("assets/icones/position_icon.svg") !important;
+}
+
+.position-dark {
+    background: url("assets/icones/position_light.svg") !important;
+}
+
+.github-light {
+    background: url("assets/icones/github_light.svg") !important;
+}
+
+.github-dark {
+    background: url("assets/icones/github.svg") !important;
+}
+
+.linkedin-light {
+    background: url("assets/icones/linkedin_light.svg") !important;
+}
+
+.linkedin-dark {
+    background: url("assets/icones/linkedin.svg") !important;
+}
+
+@media only screen and (max-width: 550px) {
+
+    h1,
+    h2 {
+        font-size: 36px;
+    }
+}
+
+@media only screen and (min-width: 551px) and (max-width: 900px) {
+
+    h1,
+    h2 {
+        font-size: 46px;
     }
 }

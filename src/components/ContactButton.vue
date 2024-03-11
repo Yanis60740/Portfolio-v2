@@ -1,10 +1,10 @@
 <template>
   <div>
     <button class="contactButton"  @mouseover="hover" @mouseleave="unhover">
-      <div class="contactButton__bg" ref="contactBg"></div>
+      <div class="contactButton__bg" ref="contactBg" :class="$store.getters.themeClassesBg"></div>
       <div class="contactButton__text">
         <span class="firstSpan" ref="firstSp">GET IN TOUCH</span>
-        <span class="secondSpan" ref="secondSp">GET IN TOUCH</span>
+        <span class="secondSpan" ref="secondSp" :class="$store.getters.themeClassesColor">GET IN TOUCH</span>
       </div>
     </button>
   </div>
