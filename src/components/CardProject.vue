@@ -1,6 +1,6 @@
 <template>
   <div class="cardProject">
-    <div class="cardProject__box">
+    <a class="cardProject__box" :href=link>
       <div class="cardProject__box__illustration">
         <img :src="processedIcon" :alt="name" />
       </div>
@@ -8,7 +8,7 @@
         <h3>{{ name }}</h3>
         <h4>{{ type }}</h4>
       </div>
-    </div>
+    </a>
   </div>
 </template>
 
@@ -27,6 +27,9 @@ export default {
       required: true,
     },
     icon: {
+      type: String,
+    },
+    link: {
       type: String,
     },
   },
@@ -60,16 +63,17 @@ export default {
     flex-direction: column;
     padding: 16px;
     box-sizing: border-box;
+    cursor: pointer;
     &__illustration{
       margin-bottom: 20px;
         & img{
             filter: grayscale(100%);
-            transition: filter 0.3s;
+            transition: ease-in-out 0.4s;
             width: 100%;
-            height: 100%;
             border-radius: 15px;
             object-fit: cover;
             aspect-ratio: 2/1;
+            
         }
     }
     &__text{
@@ -80,7 +84,8 @@ export default {
   }
   &__box:hover{
         & img{
-            filter: grayscale(0%);
+            transition: ease-in-out 0.4s;
+            filter: none;
         }
     }
 }

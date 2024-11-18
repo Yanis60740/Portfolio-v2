@@ -5,7 +5,6 @@
   <SkillsSection/>
   <WorkSection/>
   <FooterVue/>
-
 </template>
 
 <script>

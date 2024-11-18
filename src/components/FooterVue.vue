@@ -3,9 +3,15 @@
     <div class="footerVue">
         <div class="footerVue__banner" :class="[$store.getters.themeClassesInversed, $store.getters.themeClassesBorderInversed]">
             <div class="footerVue__banner__text" :class="$store.getters.themeClassesColor">
-                Get in touch
+                <div class="footerVue__banner__text__carrousel">Get in touch</div>
+                <div class="footerVue__banner__text__carrousel"  aria-hidden="true">Get in touch</div>
+                <div class="footerVue__banner__text__carrousel"  aria-hidden="true">Get in touch</div>
+                <div class="footerVue__banner__text__carrousel"  aria-hidden="true">Get in touch</div>
+                <div class="footerVue__banner__text__carrousel"  aria-hidden="true">Get in touch</div>
+                
             </div>
         </div>
+        
         <div class="footerVue__box" :class="[$store.getters.themeClassesInversed, $store.getters.themeClassesBorderInversed]">
             <div class="footerVue__box__container" :class="$store.getters.themeClassesColor">
                 <div class="containerLeft" :class="$store.getters.themeClassesColor">
@@ -31,23 +37,9 @@
                     </div>
                 </div>
                 <div class="containerRight">
-                    <!-- <a href="mailto:yanisabid80000@gmail.com">
+                    <a href="mailto:yanisabid80000@gmail.com">
                         <ContactButton />
-                    </a> -->
-                    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mknlpvyl" method="post">
-                        <fieldset id="fs-frm-inputs">
-                            <div class="containerRight__fieldBox">
-                                <textarea type="email" name="_replyto" id="email-address" placeholder="Email adress" required="" autocomplete="off" :class="[$store.getters.themeClassesBg, $store.getters.themeClassesColor]"></textarea>
-                            </div>
-                            <div class="containerRight__fieldBox">
-                                <textarea name="name" id="subject" placeholder="Subject" required="" autocomplete="off" :class="[$store.getters.themeClassesColor]"></textarea>
-                            </div>
-                            <div class="containerRight__fieldBox">
-                                <textarea name="message" id="message" placeholder="Message" required="" autocomplete="off" :class="[$store.getters.themeClassesColor]"></textarea>
-                            </div>
-                        </fieldset>
-                        <ContactButton type="submit" value="Submit"/>
-                    </form>
+                    </a>
                 </div>
             </div>
         </div>
@@ -72,20 +64,30 @@ export default {
     data() {
         return {
             footerData: jsonData.footer,
+            bannerWidth: null,
+            carrouselFooterWidth: null,
         };
     },
+    mounted() {
+        this.startCarouselFooter();
+    },
     methods: {
-        setupBannerAnimation() {
-            let banner = document.querySelector('.footerVue__banner');
-            let bannerText = document.querySelector('.footerVue__banner__text');
-            let textWidth = banner.clientWidth;
-            let tl = gsap.timeline({
-                repeat: -1, 
-                defaults: { ease: "linear" }
+        startCarouselFooter() {
+            this.bannerWidth = document.querySelector(".footerVue__banner").offsetWidth;
+            this.carrouselFooterWidth = document.querySelector(".footerVue__banner__text__carrousel").offsetWidth;
+            console.log(this.carrouselFooterWidth);
+            gsap.set(".footerVue__banner__text__carrousel", {
+                x: (i) => -i * (this.carrouselFooterWidth + 50),
+                left: this.carrouselFooterWidth - 70,
             });
-            tl.to(bannerText, {
-                x: -textWidth*2.5, 
-                duration: 5, 
+            gsap.to(".footerVue__banner__text__carrousel", {
+                duration: 15,
+                ease: "none",
+                x: `-=` + ((this.carrouselFooterWidth * 5) + 250),
+                modifiers: {
+                    x: gsap.utils.unitize(x => parseFloat(x) % ((this.carrouselFooterWidth * 5) + 250)),
+                },
+                repeat: -1
             });
         },
     },
@@ -99,9 +101,6 @@ export default {
         }
         return [];
         }
-    },
-    mounted() {
-        this.setupBannerAnimation();
     },
 }
 </script>
@@ -128,6 +127,14 @@ export default {
             font-size: $title-size;
             text-transform: uppercase;
             margin: 0;
+            position: relative;
+            display: flex;
+            &__carrousel {
+                width: max-content;
+                display: flex;
+                position: absolute;
+            }
+        
         }
     }
     &__box{
@@ -246,6 +253,9 @@ export default {
 }
 
 .credits{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: $primary-color;
     height: 40px;
     width: 100%;

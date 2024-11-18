@@ -50,24 +50,22 @@
       "name": "Works",
       "project": [
         {
-          "name": "yanis abid",
-          "type": "portfolio v1",
-          "icon": "portfolio_v1.png"
+          "name": "Narrative",
+          "type": "Front page",
+          "icon": "narrative.png",
+          "link": "https://narrative-by-yanis-abid.vercel.app/"
         },
         {
-          "name": "energie watt",
-          "type": "application de simulation de taxes",
-          "icon": "energiewatt.png"
-        },
-        {
-          "name": "renta&co",
-          "type": "application de gestion pour boulangerie",
-          "icon": "rentandco.png"
+          "name": "Dofus",
+          "type": "Carrousel",
+          "icon": "dofus-carrousel.png",
+          "link": "https://dofus-carrousel-by-yanis-abid.vercel.app/"
         },
         {
           "name": "yanis abid",
-          "type": "portfolio v2",
-          "icon": "portfolio_v2.png"
+          "type": "portfolio",
+          "icon": "portfolio_v2.png",
+          "link": "https://yanisabid.fr/"
         }
       ]
     }

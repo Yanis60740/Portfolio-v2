@@ -70,6 +70,13 @@ export default {
         background-size: cover;
         filter: grayscale(100%);
         width: 320px;
+        cursor: pointer;
+        transition: ease-in-out .4s;
+      }
+
+      & div:hover {
+        transition: ease-in-out .4s;
+        filter: none;
       }
     }
     &__right {

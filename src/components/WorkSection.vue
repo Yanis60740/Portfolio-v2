@@ -12,6 +12,7 @@
                     :name="projet.name" 
                     :type="projet.type" 
                     :icon="projet.icon" 
+                    :link="projet.link"
                 />
             </div>
         </div>
