@@ -1,0 +1,94 @@
+{
+  "title": "Web developer junior",
+  "sections": [
+    {
+      "name": "About me",
+      "accroche": [
+        "Hello !",
+        "I'm Yanis Abid,"
+      ],
+      "content": [
+        "I am a junior web developer with a passion for creating functional websites and applications. ",
+        "My passion for programming has driven me to constantly learn new skills and technologies to improve my projects.",
+        "Here you will find my skills and my latest works.",
+        "I'm always looking for exciting new challenges, so feel free to contact me to discuss your projects."
+      ],
+      "icon": "position_icon.svg",
+      "localisation": "Amiens, Lille",
+      "photo": "../src/assets/images/yanis.jpg"
+    },
+    {
+      "name": "Skills",
+      "skills": [
+        {
+          "name": "C",
+          "icon": "c.svg"
+        },
+        {
+          "name": "vue",
+          "icon": "vue.svg"
+        },
+        {
+          "name": "mysql",
+          "icon": "mysql.svg"
+        },
+        {
+          "name": "php",
+          "icon": "php.svg"
+        },
+        {
+          "name": "html",
+          "icon": "html.svg"
+        },
+        {
+          "name": "css",
+          "icon": "css.svg"
+        }
+      ]
+    },
+    {
+      "name": "Works",
+      "project": [
+        {
+          "name": "Narrative",
+          "type": "Front page",
+          "icon": "narrative.png",
+          "link": "https://narrative-by-yanis-abid.vercel.app/"
+        },
+        {
+          "name": "Dofus",
+          "type": "Carrousel",
+          "icon": "dofus-carrousel.png",
+          "link": "https://dofus-carrousel-by-yanis-abid.vercel.app/"
+        },
+        {
+          "name": "yanis abid",
+          "type": "portfolio",
+          "icon": "portfolio_v2.png",
+          "link": "https://yanisabid.fr/"
+        }
+      ]
+    }
+  ],
+  "footer": {
+    "name": "Footer",
+    "contact": [
+      {
+        "mail": "yanisabid80000@gmail.com",
+        "phone": "06 71 25 72 55"
+      }
+    ],
+    "follow": [
+      {
+        "name": "github",
+        "icon": "github_light.svg",
+        "link": "https://github.com/Yanis60740"
+      },
+      {
+        "name": "linkedin",
+        "icon": "linkedin_light.svg",
+        "link": "https://www.linkedin.com/in/yanis-abid-8b1b3b1b4/"
+      }
+    ]
+  }
+}
