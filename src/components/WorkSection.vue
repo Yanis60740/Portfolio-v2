@@ -1,5 +1,5 @@
 <template>
-    <div class="ancre" id="work"></div>
+    <div class="ancre" id="works"></div>
     <div class="workSection" :class="[$store.getters.themeClasses, $store.getters.themeClassesBorder]">
         <div class="sectionTitle" :class="[$store.getters.themeClasses, $store.getters.themeClassesBorder]">
             <h2 :class="$store.getters.themeClasses">{{ projets.name.toUpperCase() }}</h2>
