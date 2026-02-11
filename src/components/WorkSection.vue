@@ -50,7 +50,7 @@ export default {
         padding: 70px 0;
         &__container{
             border-radius: 22px;
-            width: 75%;
+            width: 50%;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;

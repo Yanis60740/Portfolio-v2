@@ -50,6 +50,12 @@
       "name": "Works",
       "project": [
         {
+          "name": "Creative Giants",
+          "type": "Front page",
+          "icon": "creativegiants.png",
+          "link": "https://creative-giants-by-yanis-abid.vercel.app/"
+        },
+        {
           "name": "Narrative",
           "type": "Front page",
           "icon": "narrative.png",
